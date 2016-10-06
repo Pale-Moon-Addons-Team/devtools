@@ -1,0 +1,14 @@
+[addon]
+id="@ADDON_APMO_ID@"
+type="@ADDON_APMO_TYPE@"
+guid="@ADDON_ID@"
+xpi="@ADDON_XPI_NAME@-@ADDON_VERSION@.xpi"
+compat="@ADDON_TARGET_APP_MAXVER@"
+minVer="@ADDON_TARGET_APP_MINVER@"
+maxVer="@ADDON_TARGET_APP_MAXVER@"
+
+[meta]
+name="@ADDON_NAME@"
+version="@ADDON_VERSION@"
+author="@ADDON_AUTHOR@"
+description="@ADDON_LONG_DESC@"
