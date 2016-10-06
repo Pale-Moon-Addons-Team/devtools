@@ -25,3 +25,9 @@ build_func_preprocess(
     ${FINAL_TARGET}/install.rdf
     ${varAddonDefines}
 )
+
+build_func_preprocess(
+    bootstrap.js.in
+    ${FINAL_TARGET}/bootstrap.js
+    ${varAddonDefines}
+)
