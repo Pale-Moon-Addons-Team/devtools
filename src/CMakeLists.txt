@@ -31,3 +31,5 @@ build_func_preprocess(
     ${FINAL_TARGET}/bootstrap.js
     ${varAddonDefines}
 )
+
+add_subdirectory(icons/default)
