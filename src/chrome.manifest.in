@@ -12,42 +12,42 @@ skin @ADDON_CHROME_NAME@-os classic/1.0 skin/classic/mac/ os=Darwin
 skin @ADDON_CHROME_NAME@-os classic/1.0 skin/classic/linux/ os=Linux
 #endif
 
-locale  @ADDON_CHROME_NAME@ bg          locale/bg/
-locale  @ADDON_CHROME_NAME@ ca-AD       locale/ca-AD/
-locale  @ADDON_CHROME_NAME@ cs          locale/cs/
-locale  @ADDON_CHROME_NAME@ da          locale/da/
-locale  @ADDON_CHROME_NAME@ de          locale/de/
-locale  @ADDON_CHROME_NAME@ el          locale/el/
-locale  @ADDON_CHROME_NAME@ es          locale/es/
 locale  @ADDON_CHROME_NAME@ en-US       locale/en-US/
-locale  @ADDON_CHROME_NAME@ es-AR       locale/es-AR/
-locale  @ADDON_CHROME_NAME@ es-ES       locale/es-ES/
-locale  @ADDON_CHROME_NAME@ eu          locale/eu/
-locale  @ADDON_CHROME_NAME@ fa          locale/fa/
-locale  @ADDON_CHROME_NAME@ fr          locale/fr/
-locale  @ADDON_CHROME_NAME@ he          locale/he/
-locale  @ADDON_CHROME_NAME@ hr-HR       locale/hr-HR/
-locale  @ADDON_CHROME_NAME@ hu-HU       locale/hu-HU/
-locale  @ADDON_CHROME_NAME@ hy-AM       locale/hy-AM/
-locale  @ADDON_CHROME_NAME@ is-IS       locale/is-IS/
-locale  @ADDON_CHROME_NAME@ it          locale/it/
-locale  @ADDON_CHROME_NAME@ ja-JP       locale/ja-JP/
-locale  @ADDON_CHROME_NAME@ ko-KR       locale/ko-KR/
-locale  @ADDON_CHROME_NAME@ nl          locale/nl/
-locale  @ADDON_CHROME_NAME@ pl          locale/pl/
-locale  @ADDON_CHROME_NAME@ pt-BR       locale/pt-BR/
-locale  @ADDON_CHROME_NAME@ pt-PT       locale/pt-PT/
-locale  @ADDON_CHROME_NAME@ ro-RO       locale/ro-RO/
-locale  @ADDON_CHROME_NAME@ ru-RU       locale/ru/
-locale  @ADDON_CHROME_NAME@ sk-SK       locale/sk-SK/
-locale  @ADDON_CHROME_NAME@ sl-SI       locale/sl-SI/
-locale  @ADDON_CHROME_NAME@ sr          locale/sr/
-locale  @ADDON_CHROME_NAME@ sv-SE       locale/sv-SE/
-locale  @ADDON_CHROME_NAME@ tr          locale/tr/
-locale  @ADDON_CHROME_NAME@ uk-UA       locale/uk-UA/
-locale  @ADDON_CHROME_NAME@ vi          locale/vi/
-locale  @ADDON_CHROME_NAME@ zh-CN       locale/zh-CN/
-locale  @ADDON_CHROME_NAME@ zh-TW       locale/zh-TW/
+# locale  @ADDON_CHROME_NAME@ bg          locale/bg/
+# locale  @ADDON_CHROME_NAME@ ca-AD       locale/ca-AD/
+# locale  @ADDON_CHROME_NAME@ cs          locale/cs/
+# locale  @ADDON_CHROME_NAME@ da          locale/da/
+# locale  @ADDON_CHROME_NAME@ de          locale/de/
+# locale  @ADDON_CHROME_NAME@ el          locale/el/
+# locale  @ADDON_CHROME_NAME@ es          locale/es/
+# locale  @ADDON_CHROME_NAME@ es-AR       locale/es-AR/
+# locale  @ADDON_CHROME_NAME@ es-ES       locale/es-ES/
+# locale  @ADDON_CHROME_NAME@ eu          locale/eu/
+# locale  @ADDON_CHROME_NAME@ fa          locale/fa/
+# locale  @ADDON_CHROME_NAME@ fr          locale/fr/
+# locale  @ADDON_CHROME_NAME@ he          locale/he/
+# locale  @ADDON_CHROME_NAME@ hr-HR       locale/hr-HR/
+# locale  @ADDON_CHROME_NAME@ hu-HU       locale/hu-HU/
+# locale  @ADDON_CHROME_NAME@ hy-AM       locale/hy-AM/
+# locale  @ADDON_CHROME_NAME@ is-IS       locale/is-IS/
+# locale  @ADDON_CHROME_NAME@ it          locale/it/
+# locale  @ADDON_CHROME_NAME@ ja-JP       locale/ja-JP/
+# locale  @ADDON_CHROME_NAME@ ko-KR       locale/ko-KR/
+# locale  @ADDON_CHROME_NAME@ nl          locale/nl/
+# locale  @ADDON_CHROME_NAME@ pl          locale/pl/
+# locale  @ADDON_CHROME_NAME@ pt-BR       locale/pt-BR/
+# locale  @ADDON_CHROME_NAME@ pt-PT       locale/pt-PT/
+# locale  @ADDON_CHROME_NAME@ ro-RO       locale/ro-RO/
+# locale  @ADDON_CHROME_NAME@ ru-RU       locale/ru/
+# locale  @ADDON_CHROME_NAME@ sk-SK       locale/sk-SK/
+# locale  @ADDON_CHROME_NAME@ sl-SI       locale/sl-SI/
+# locale  @ADDON_CHROME_NAME@ sr          locale/sr/
+# locale  @ADDON_CHROME_NAME@ sv-SE       locale/sv-SE/
+# locale  @ADDON_CHROME_NAME@ tr          locale/tr/
+# locale  @ADDON_CHROME_NAME@ uk-UA       locale/uk-UA/
+# locale  @ADDON_CHROME_NAME@ vi          locale/vi/
+# locale  @ADDON_CHROME_NAME@ zh-CN       locale/zh-CN/
+# locale  @ADDON_CHROME_NAME@ zh-TW       locale/zh-TW/
 
 #if DEVTOOLS_SKU == 1128
 # Support for Mac
