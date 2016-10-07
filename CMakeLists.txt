@@ -45,6 +45,17 @@ if((BINOC_BUILD) AND (NOT CMAKE_BINARY_DIR MATCHES CMAKE_SOURCE_DIR))
 
     FIND_FINAL_TARGET()
 
+    function(COMMON_PREPROCESS _FILE_LIST)
+        foreach(_FILE ${_FILE_LIST})
+            string(REGEX REPLACE "(\.in)$" "" _FILE_NAME ${_FILE})
+            build_func_preprocess(
+                ${_FILE}
+                ${FINAL_TARGET}/${_FILE_NAME}
+                ${varAddonDefines}
+            )
+        endforeach()
+    endfunction(COMMON_PREPROCESS)
+
     # Add subdirectories
     add_subdirectory(src)
     add_subdirectory(${DEVTOOLS_SKU})
