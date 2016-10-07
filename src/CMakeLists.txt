@@ -14,7 +14,6 @@ set(SOURCE_PP_FILES
 COPY_TO_DIST("${SOURCE_FILES}")
 COMMON_PREPROCESS("${SOURCE_PP_FILES}")
 
-# Preprocess files
 build_func_preprocess(
     manifest.ini.in
     ${FINAL_TARGET}/../package/manifest.ini
@@ -22,3 +21,4 @@ build_func_preprocess(
 )
 
 add_subdirectory(icons/default)
+add_subdirectory(modules)
