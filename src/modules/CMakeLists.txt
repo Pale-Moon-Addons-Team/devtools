@@ -2,8 +2,10 @@ build_macro_mkPaths()
 FIND_FINAL_TARGET()
 
 set(SOURCE_FILES
+    ${mk_srcdir}/debuggerHalter.js
     ${mk_srcdir}/fbtrace.js
     ${mk_srcdir}/firebug-http-observer.js
+    ${mk_srcdir}/firebug-service.js
     ${mk_srcdir}/observer-service.js
     ${mk_srcdir}/prefLoader.js
     ${mk_srcdir}/require.js
@@ -11,8 +13,6 @@ set(SOURCE_FILES
 )
 
 set(SOURCE_PP_FILES
-    debuggerHalter.js
-    firebug-service.js
     firebug-trace-service.js
     gcli.js
     loader.js
