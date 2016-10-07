@@ -18,12 +18,12 @@ if(varTargetSku1128)
 endif()
 
 set(SOURCE_PP_FILES
-    firebug-trace-service.js
-    gcli.js
-    loader.js
-    locale.js
-    mini-require.js
-    require-debug.js
+    firebug-trace-service.js.in
+    gcli.js.in
+    loader.js.in
+    locale.js.in
+    mini-require.js.in
+    require-debug.js.in
 )
 
 COPY_TO_DIST("${SOURCE_FILES}")
