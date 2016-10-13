@@ -21,7 +21,7 @@ set(SRC_XML_FILES
 )
 
 set(SRC_XUL_FILES
-    ${mk_srcdir}/customzieShortcuts.xul
+    ${mk_srcdir}/customizeShortcuts.xul
     ${mk_srcdir}/firebug.xul
     ${mk_srcdir}/firebugFrame.xul
     ${mk_srcdir}/firebugMenuOverlay.xul

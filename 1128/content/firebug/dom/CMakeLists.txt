@@ -14,7 +14,6 @@ set(SRC_JS_FILES
 )
 
 set(SOURCE_FILES
-    ${SRC_CSS_FILES}
     ${SRC_JS_FILES}
 )
 

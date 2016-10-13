@@ -12,6 +12,7 @@ set(SRC_JSM_FILES
 )
 
 set(SOURCE_FILES
+    ${SRC_JS_FILES}
     ${SRC_JSM_FILES}
     ${mk_srcdir}/LICENSE
 )

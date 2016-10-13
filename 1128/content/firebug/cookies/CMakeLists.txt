@@ -3,7 +3,7 @@ FIND_FINAL_TARGET()
 
 set(SRC_CSS_FILES
     ${mk_srcdir}/cookies.css
-    ${mk_srcdir}/editCookies.css
+    ${mk_srcdir}/editCookie.css
 )
 
 set(SRC_JS_FILES
