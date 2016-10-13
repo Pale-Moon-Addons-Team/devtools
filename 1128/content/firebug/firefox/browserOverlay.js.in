@@ -385,31 +385,7 @@ BrowserOverlay.prototype =
 
     getVersion: function()
     {
-        var versionURL = "chrome://firebug/content/branch.properties";
-        var ioService = Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService);
-
-        var channel = ioService.newChannel(versionURL, null, null);
-        var input = channel.open();
-        var sis = Cc["@mozilla.org/scriptableinputstream;1"].
-            createInstance(Ci.nsIScriptableInputStream);
-        sis.init(input);
-
-        var content = sis.readBytes(input.available());
-        sis.close();
-
-        var m = /RELEASE=(.*)/.exec(content);
-        if (m)
-            var release = m[1];
-        else
-            return "no RELEASE in " + versionURL;
-
-        m = /VERSION=(.*)/.exec(content);
-        if (m)
-            var version = m[1];
-        else
-            return "no VERSION in " + versionURL;
-
-        return version+""+release;
+        return "@ADDON_VERSION@";
     },
 
     // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //

@@ -9,11 +9,14 @@ set(SRC_CSS_FILES
 set(SRC_JS_FILES
     ${mk_srcdir}/browserCommands.js
     ${mk_srcdir}/browserMenu.js
-    ${mk_srcdir}/browserOverlay.js
     ${mk_srcdir}/browserOverlayLib.js
     ${mk_srcdir}/browserToolbar.js
     ${mk_srcdir}/customizeShortcuts.js
     ${mk_srcdir}/panelBarWaiter.js
+)
+
+set(SRC_JS_PP_FILES
+    browserOverlay.js.in
 )
 
 set(SRC_XML_FILES
@@ -34,7 +37,12 @@ set(SOURCE_FILES
     ${SRC_XUL_FILES}
 )
 
+set(SOURCE_PP_FILES
+    ${SRC_JS_PP_FILES}
+)
+
 COPY_TO_DIST("${SOURCE_FILES}")
+COMMON_PREPROCESS("${SOURCE_PP_FILES}")
 
 add_subdirectory(external-editors)
 add_subdirectory(start-button)
