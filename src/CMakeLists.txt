@@ -2,6 +2,7 @@ build_macro_mkPaths()
 FIND_FINAL_TARGET()
 
 set(SOURCE_FILES
+    ${mk_srcdir}/icon.png
     ${mk_srcdir}/icon64.png
 )
 
