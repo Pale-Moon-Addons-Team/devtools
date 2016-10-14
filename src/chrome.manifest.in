@@ -1,13 +1,13 @@
-content @ADDON_CHROME_NAME@ content/@ADDON_CHROME_NAME@/ contentaccessible=yes
+content     @ADDON_CHROME_NAME@         content/@ADDON_CHROME_NAME@/            contentaccessible=yes
 
 # Moved to bootstrap.js:
-# resource @ADDON_CHROME_NAME@ modules/
-# resource @ADDON_CHROME_NAME@ui content/@ADDON_CHROME_NAME@/@ADDON_CHROME_NAME@ui/
-# resource moduleloader modules/
+# resource  @ADDON_CHROME_NAME@         modules/
+# resource  @ADDON_CHROME_NAME@ui       content/@ADDON_CHROME_NAME@/@ADDON_CHROME_NAME@ui/
+# resource  moduleloader                modules/
 
-skin @ADDON_CHROME_NAME@ classic/1.0 skin/classic/
-skin @ADDON_CHROME_NAME@-os  classic/1.0 skin/classic/win/
-skin @ADDON_CHROME_NAME@-os classic/1.0 skin/classic/mac/ os=Darwin
-skin @ADDON_CHROME_NAME@-os classic/1.0 skin/classic/linux/ os=Linux
+skin        @ADDON_CHROME_NAME@         classic/1.0     skin/classic/
+skin        @ADDON_CHROME_NAME@-os      classic/1.0     skin/classic/win/
+skin        @ADDON_CHROME_NAME@-os      classic/1.0     skin/classic/mac/       os=Darwin
+skin        @ADDON_CHROME_NAME@-os      classic/1.0     skin/classic/linux/     os=Linux
 
-locale  @ADDON_CHROME_NAME@ en-US       locale/en-US/
+locale      @ADDON_CHROME_NAME@         en-US           locale/en-US/

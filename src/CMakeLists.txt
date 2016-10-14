@@ -23,5 +23,5 @@ build_func_preprocess(
 
 add_subdirectory(defaults/preferences)
 add_subdirectory(icons/default)
-add_subdirectory(locales/en-US)
+add_subdirectory(locale/en-US)
 add_subdirectory(modules)
