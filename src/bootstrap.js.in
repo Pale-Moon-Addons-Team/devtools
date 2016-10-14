@@ -10,14 +10,8 @@ const Cu = Components.utils;
 // List of firebug modules that must be loaded at startup and unloaded on shutdown.
 // !important every new module loaded with Cu.import must be added here
 var FIREBUG_MODULES = [
-#if DEVTOOLS_SKU == 1128
-    "resource://@ADDON_CHROME_NAME@/debuggerHalter.js",
-#endif
     "resource://@ADDON_CHROME_NAME@/fbtrace.js",
     "resource://@ADDON_CHROME_NAME@/firebug-http-observer.js",
-#if DEVTOOLS_SKU == 1128
-    "resource://@ADDON_CHROME_NAME@/firebug-service.js",
-#endif
     "resource://@ADDON_CHROME_NAME@/firebug-trace-service.js",
     "resource://@ADDON_CHROME_NAME@/gcli.js",
     "resource://@ADDON_CHROME_NAME@/loader.js",
@@ -67,11 +61,9 @@ function startup(params, reason)
     //register extensions
     FirebugLoader.startup();
 
-#if DEVTOOLS_SKU == 2017
     // Load server side in case we are in the server mode.
     if (loadServer())
         return;
-#endif
 
     // Load Firebug into all existing browser windows.
     var enumerator = Services.wm.getEnumerator("navigator:browser");
@@ -80,12 +72,6 @@ function startup(params, reason)
 
     // Listen for new windows, Firebug must be loaded into them too.
     Services.obs.addObserver(windowWatcher, "chrome-document-global-created", false);
-
-#if DEVTOOLS_SKU == 1128
-    // GCLI commands
-    Cu.import("resource://@ADDON_CHROME_NAME@/gcli.js");
-    FirebugGCLICommands.startup();
-#endif
 }
 
 function shutdown(params, reason)
@@ -94,10 +80,8 @@ function shutdown(params, reason)
     if (reason == APP_SHUTDOWN)
         return;
 
-#if DEVTOOLS_SKU == 2017
     // Shutdown the server (in case we are in server mode).
     unloadServer();
-#endif
 
     // Remove "new window" listener.
     Services.obs.removeObserver(windowWatcher, "chrome-document-global-created");
@@ -114,14 +98,6 @@ function shutdown(params, reason)
 
     // Unregister all GCLI commands
     FirebugGCLICommands.shutdown();
-
-#if DEVTOOLS_SKU == 1128
-    // xxxHonza: I think this shouldn't be here (perhaps in firebug-service.js)
-    // Shutdown Firebug's JSD debugger service.
-    var fbs = Cu.import("resource://@ADDON_CHROME_NAME@/firebug-service.js", {}).fbs;
-    fbs.disableDebugger();
-    fbs.shutdown();
-#endif
 
     // remove default preferences
     PrefLoader.clearDefaultPrefs();
@@ -156,8 +132,8 @@ var windowWatcher =
     }
 };
 
-#if DEVTOOLS_SKU == 2017
 // ********************************************************************************************* //
+
 // Server
 
 var serverScope = {};
@@ -201,5 +177,5 @@ function unloadServer()
     if (serverScope.FirebugServer)
         serverScope.FirebugServer.shutdown();
 }
-#endif
+
 // ********************************************************************************************* //

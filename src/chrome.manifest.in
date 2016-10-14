@@ -7,10 +7,8 @@ content @ADDON_CHROME_NAME@ content/@ADDON_CHROME_NAME@/ contentaccessible=yes
 
 skin @ADDON_CHROME_NAME@ classic/1.0 skin/classic/
 skin @ADDON_CHROME_NAME@-os  classic/1.0 skin/classic/win/
-#if DEVTOOLS_SKU == 2017
 skin @ADDON_CHROME_NAME@-os classic/1.0 skin/classic/mac/ os=Darwin
 skin @ADDON_CHROME_NAME@-os classic/1.0 skin/classic/linux/ os=Linux
-#endif
 
 locale  @ADDON_CHROME_NAME@ en-US       locale/en-US/
 # locale  @ADDON_CHROME_NAME@ bg          locale/bg/
@@ -48,14 +46,3 @@ locale  @ADDON_CHROME_NAME@ en-US       locale/en-US/
 # locale  @ADDON_CHROME_NAME@ vi          locale/vi/
 # locale  @ADDON_CHROME_NAME@ zh-CN       locale/zh-CN/
 # locale  @ADDON_CHROME_NAME@ zh-TW       locale/zh-TW/
-
-#if DEVTOOLS_SKU == 1128
-# Support for Mac
-override chrome://@ADDON_CHROME_NAME@-os/skin/debugger.css   chrome://@ADDON_CHROME_NAME@/skin/mac/debugger.css os=Darwin
-override chrome://@ADDON_CHROME_NAME@-os/skin/@ADDON_CHROME_NAME@.css    chrome://@ADDON_CHROME_NAME@/skin/mac/@ADDON_CHROME_NAME@.css os=Darwin
-override chrome://@ADDON_CHROME_NAME@-os/skin/panel.css      chrome://@ADDON_CHROME_NAME@/skin/mac/panel.css os=Darwin
-override chrome://@ADDON_CHROME_NAME@-os/skin/window.css     chrome://@ADDON_CHROME_NAME@/skin/mac/window.css os=Darwin
-
-# Support for Linux
-override chrome://@ADDON_CHROME_NAME@-os/skin/@ADDON_CHROME_NAME@.css  chrome://@ADDON_CHROME_NAME@/skin/linux/@ADDON_CHROME_NAME@.css os=Linux
-#endif

@@ -1,21 +1,11 @@
 # Preprocessor Metadata
-if(varTargetSku1128)
-set(ADDON_ID "devtools-lite@addons.palemoon.org")
-set(ADDON_VERSION "1.0.0.1128a1")
-set(ADDON_NAME "Web Developer Tools Lite")
-set(ADDON_XPI_NAME "devtools-lite")
-set(ADDON_CHROME_NAME "firebug")
-set(ADDON_SHORT_DESC "Basic Developer Tools")
-set(ADDON_LONG_DESC "Basic Developer Tools")
-elseif(varTargetSku2017)
 set(ADDON_ID "devtools@addons.palemoon.org")
 set(ADDON_VERSION "1.0.0.2017a1")
 set(ADDON_NAME "Web Developer Tools")
 set(ADDON_XPI_NAME "devtools")
+set(ADDON_CHROME_NAME "firebug")
 set(ADDON_SHORT_DESC "Full service Web Developer Tools")
 set(ADDON_LONG_DESC "Full service Web Developer Tools")
-endif()
-
 set(ADDON_AUTHOR "Pale Moon Add-ons Team")
 set(ADDON_TARGET_APP_NAME "Pale Moon")
 set(ADDON_TARGET_APP_ID "{8de7fcbb-c55c-4fbe-bfc5-fc555c87dbc4}")
@@ -26,7 +16,6 @@ set(ADDON_APMO_TYPE "extension")
 
 set(varAddonDefines
     ${varBuildDefines}
-    -DDEVTOOLS_SKU=${DEVTOOLS_SKU}
     -DADDON_ID="${ADDON_ID}"
     -DADDON_VERSION="${ADDON_VERSION}"
     -DADDON_NAME="${ADDON_NAME}"
