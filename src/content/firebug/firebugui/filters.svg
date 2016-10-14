@@ -23,6 +23,11 @@
         </feComponentTransfer>
     </filter>
     <filter id="grayscale">
+        <feComponentTransfer>
+            <feFuncR type="table" tableValues="-0.75 1.75"/>
+            <feFuncG type="table" tableValues="-0.75 1.75"/>
+            <feFuncB type="table" tableValues="-0.75 1.75"/>
+        </feComponentTransfer>
         <feColorMatrix type="saturate" values="0"/>
     </filter>
     <filter id="brightenedGrayscale">
