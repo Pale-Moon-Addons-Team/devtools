@@ -1,0 +1,112 @@
+build_macro_mkPaths()
+FIND_FINAL_TARGET()
+
+set(SRC_CSS_FILES
+    ${mk_srcdir}/balloonNote.css
+    ${mk_srcdir}/breakpoint.css
+    ${mk_srcdir}/callstack.css
+    ${mk_srcdir}/callstackPanel.css
+    ${mk_srcdir}/console.css
+    ${mk_srcdir}/css.css
+    ${mk_srcdir}/customizeShortcuts.css
+    ${mk_srcdir}/debugger.css
+    ${mk_srcdir}/dom.css
+    ${mk_srcdir}/events.css
+    ${mk_srcdir}/firebug.css
+    ${mk_srcdir}/fontViewer.css
+    ${mk_srcdir}/html.css
+    ${mk_srcdir}/jsonViewer.css
+    ${mk_srcdir}/layout.css
+    ${mk_srcdir}/net.css
+    ${mk_srcdir}/panel.css
+    ${mk_srcdir}/panelNotification.css
+    ${mk_srcdir}/panelbase.css
+    ${mk_srcdir}/performanceTiming.css
+    ${mk_srcdir}/quickInfoBox.css
+    ${mk_srcdir}/quickInfoBoxPanel.css
+    ${mk_srcdir}/scriptPanel.css
+    ${mk_srcdir}/selectors.css
+    ${mk_srcdir}/tableRep.css
+    ${mk_srcdir}/timeInfoTip.css
+    ${mk_srcdir}/trace.css
+    ${mk_srcdir}/watch.css
+    ${mk_srcdir}/window.css
+)
+
+set(SRC_PNG_FILES
+    ${mk_srcdir}/activation-menu-console.png
+    ${mk_srcdir}/activation-menu-net.png
+    ${mk_srcdir}/activation-menu-script.png
+    ${mk_srcdir}/firebug64.png
+    ${mk_srcdir}/firebugBig.png
+    ${mk_srcdir}/noteBorders.png
+    ${mk_srcdir}/noteBordersUps.png
+    ${mk_srcdir}/noteContent.png
+    ${mk_srcdir}/noteContentUps.png
+    ${mk_srcdir}/noteCorners.png
+    ${mk_srcdir}/noteCornersUps.png
+    ${mk_srcdir}/rulerH.png
+    ${mk_srcdir}/rulerV.png
+    ${mk_srcdir}/spinner.png
+)
+
+set(SRC_SVG_FILES
+    ${mk_srcdir}/arrowDown.svg
+    ${mk_srcdir}/arrowUp.svg
+    ${mk_srcdir}/breakOn.svg
+    ${mk_srcdir}/breakOnArmed.svg
+    ${mk_srcdir}/breakpoint.svg
+    ${mk_srcdir}/breakpointCondition.svg
+    ${mk_srcdir}/collapseSidePanels.svg
+    ${mk_srcdir}/collapseSidePanelsVertical.svg
+    ${mk_srcdir}/command.svg
+    ${mk_srcdir}/commandLinePopup.svg
+    ${mk_srcdir}/continue.svg
+    ${mk_srcdir}/disable.svg
+    ${mk_srcdir}/dropMarker.svg
+    ${mk_srcdir}/error.svg
+    ${mk_srcdir}/errorColumnIndicator.svg
+    ${mk_srcdir}/executionPointer.svg
+    ${mk_srcdir}/expandSidePanels.svg
+    ${mk_srcdir}/expandSidePanelsVertical.svg
+    ${mk_srcdir}/firebugSmall.svg
+    ${mk_srcdir}/info.svg
+    ${mk_srcdir}/inspect.svg
+    ${mk_srcdir}/loading.svg
+    ${mk_srcdir}/navigationBack.svg
+    ${mk_srcdir}/navigationForward.svg
+    ${mk_srcdir}/optionsMenuTarget.svg
+    ${mk_srcdir}/optionsMenuTargetHover.svg
+    ${mk_srcdir}/prettyPrint.svg
+    ${mk_srcdir}/readOnlyProp.svg
+    ${mk_srcdir}/rerun.svg
+    ${mk_srcdir}/search.svg
+    ${mk_srcdir}/searchCancel.svg
+    ${mk_srcdir}/searchNext.svg
+    ${mk_srcdir}/searchPrevious.svg
+    ${mk_srcdir}/statusPathSeparator.svg
+    ${mk_srcdir}/stepInto.svg
+    ${mk_srcdir}/stepOut.svg
+    ${mk_srcdir}/stepOver.svg
+    ${mk_srcdir}/warning.svg
+    ${mk_srcdir}/wrappedListener.svg
+)
+
+set(SRC_XML_FILES
+    ${mk_srcdir}/bindings.xml
+)
+
+set(SOURCE_FILES
+    ${SRC_CSS_FILES}
+    ${SRC_PNG_FILES}
+    ${SRC_SVG_FILES}
+    ${SRC_XML_FILES}
+)
+
+COPY_TO_DIST("${SOURCE_FILES}")
+
+add_subdirectory(breakOn)
+add_subdirectory(cookies)
+add_subdirectory(linux)
+add_subdirectory(mac)
+add_subdirectory(win)
