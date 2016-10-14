@@ -10,7 +10,7 @@ function (FBTrace) {
 
 var imported = {};
 
-Components.utils["import"]("resource://gre/modules/commonjs/sdk/core/promise.js", imported);
+Components.utils["import"]("resource://gre/modules/jetpack/sdk/core/promise.js", imported);
 
 // ********************************************************************************************* //
 // Registration
