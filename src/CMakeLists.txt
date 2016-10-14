@@ -21,6 +21,7 @@ build_func_preprocess(
     ${varAddonDefines}
 )
 
+add_subdirectory(content/firebug)
 add_subdirectory(defaults/preferences)
 add_subdirectory(icons/default)
 add_subdirectory(locale/en-US)
