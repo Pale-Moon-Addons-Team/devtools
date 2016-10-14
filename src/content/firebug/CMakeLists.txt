@@ -13,8 +13,8 @@ set(SRC_JS_FILES
     ${mk_srcdir}/trace.js
 )
 
-set(SRC_PROPERTIES_FILES
-    ${mk_srcdir}/branch.properties
+set(SRC_PROPERTIES_PP_FILES
+    branch.properties.in
 )
 
 set(SRC_XUL_FILES
@@ -24,11 +24,15 @@ set(SRC_XUL_FILES
 set(SOURCE_FILES
     ${SRC_CSS_FILES}
     ${SRC_JS_FILES}
-    ${SRC_PROPERTIES_FILES}
     ${SRC_XUL_FILES}
 )
 
+set(SOURCE_PP_FILES
+    ${SRC_PROPERTIES_PP_FILES}
+)
+
 COPY_TO_DIST("${SOURCE_FILES}")
+COMMON_PREPROCESS("${SOURCE_PP_FILES}")
 
 add_subdirectory(accessible)
 add_subdirectory(bti/inProcess)
