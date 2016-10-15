@@ -322,16 +322,6 @@ BrowserOverlay.prototype =
                 (this.win.Firebug.currentContext ? "false" : "true"));
         }
 
-        // Update About Menu
-        var version = this.getVersion();
-        if (version)
-        {
-            var node = popup.getElementsByClassName("firebugAbout")[0];
-            var aboutLabel = node.getAttribute("label");
-            node.setAttribute("label", aboutLabel + " " + version);
-            node.classList.remove("firebugAbout");
-        }
-
         // Allow Firebug menu customization (see FBTest and FBTrace as an example).
         var event = new this.win.CustomEvent("firebugMenuShowing", {detail: popup});
         this.doc.dispatchEvent(event);

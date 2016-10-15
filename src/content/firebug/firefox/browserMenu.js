@@ -318,76 +318,6 @@ var BrowserMenu =
 
             $menuseparator(doc, {id: "FirebugBetweenOptionsAndSites", collapsed: "true"}),
 
-            // Sites
-            $menu(doc,
-            {
-                id: "FirebugMenu_Sites",
-                label: "firebug.menu.Firebug_Online",
-                tooltiptext: "firebug.menu.tip.Firebug_Online"
-            },
-            [
-                $menupopup(doc, {},
-                [
-                    $menuitem(doc,
-                    {
-                        id: "menu_firebug_firebugUrlWebsite",
-                        label: "firebug.Website",
-                        tooltiptext: "firebug.menu.tip.Website",
-                        oncommand: "Firebug.chrome.visitWebsite('main')"
-                    }),
-                    $menuitem(doc,
-                    {
-                        id: "menu_firebug_firebugUrlExtensions",
-                        label: "firebug.menu.Extensions",
-                        tooltiptext: "firebug.menu.tip.Extensions",
-                        oncommand: "Firebug.chrome.visitWebsite('extensions')"
-                    }),
-                    $menuitem(doc,
-                    {
-                        id: "menu_firebug_firebugHelp",
-                        label: "firebug.help",
-                        tooltiptext: "firebug.menu.tip.help",
-                        command: "cmd_firebug_openHelp",
-                        key: "key_firebug_help"
-                    }),
-                    $menuitem(doc,
-                    {
-                        id: "menu_firebug_firebugDoc",
-                        label: "firebug.Documentation",
-                        tooltiptext: "firebug.menu.tip.Documentation",
-                        oncommand: "Firebug.chrome.visitWebsite('docs')"
-                    }),
-                    $menuitem(doc,
-                    {
-                        id: "menu_firebug_firebugKeyboard",
-                        label: "firebug.KeyShortcuts",
-                        tooltiptext: "firebug.menu.tip.Key_Shortcuts",
-                        oncommand: "Firebug.chrome.visitWebsite('keyboard')"
-                    }),
-                    $menuitem(doc,
-                    {
-                        id: "menu_firebug_firebugForums",
-                        label: "firebug.Forums",
-                        tooltiptext: "firebug.menu.tip.Forums",
-                        oncommand: "Firebug.chrome.visitWebsite('discuss')"
-                    }),
-                    $menuitem(doc,
-                    {
-                        id: "menu_firebug_firebugIssues",
-                        label: "firebug.Issues",
-                        tooltiptext: "firebug.menu.tip.Issues",
-                        oncommand: "Firebug.chrome.visitWebsite('issues')"
-                    }),
-                    $menuitem(doc,
-                    {
-                        id: "menu_firebug_firebugDonate",
-                        label: "firebug.Donate",
-                        tooltiptext: "firebug.menu.tip.Donate",
-                        oncommand: "Firebug.chrome.visitWebsite('donate')"
-                    }),
-                ])
-            ]),
-
             // Panel selector (see 'firebug/chrome/panelSelector' module for implementation).
             $menu(doc,
             {
@@ -418,15 +348,6 @@ var BrowserMenu =
                 key: "key_firebug_customizeFBKeys"
             }),
 
-            $menuseparator(doc, {id: "menu_firebug_aboutSeparator"}),
-
-            $menuitem(doc, {
-                id: "menu_firebug_about",
-                label: "firebug.About",
-                tooltiptext: "firebug.menu.tip.About",
-                oncommand: "Firebug.browserOverlay.openAboutDialog()",
-                "class": "firebugAbout"
-            }),
         ];
     },
 
