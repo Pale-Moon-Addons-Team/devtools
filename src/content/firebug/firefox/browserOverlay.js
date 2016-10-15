@@ -43,8 +43,6 @@ Cu.import("resource://gre/modules/AddonManager.jsm");
 var servicesScope = {};
 Cu.import("resource://gre/modules/Services.jsm", servicesScope);
 
-const firstRunPage = "https://getfirebug.com/firstrun#Firebug ";
-
 var auroraChannel = "";
 try {
   var value = servicesScope.Services.prefs.getCharPref("app.update.channel");
@@ -98,7 +96,6 @@ BrowserOverlay.prototype =
         this.nodesToRemove.push(node);
 
         this.loadContextMenuOverlay();
-        this.loadFirstRunPage(reason);
 
         var version = this.getVersion();
 
@@ -532,69 +529,6 @@ BrowserOverlay.prototype =
     },
 
     // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
-    // First Run Page
-
-    loadFirstRunPage: function(reason)
-    {
-        if (this.checkFirebugVersion(Options.get("currentVersion")) <= 0)
-            return;
-
-        // Do not show the first run page when Firebug is being updated. It'll be displayed
-        // the next time the browser is restarted
-        // # ADDON_UPGRADE == 7
-        if (reason == 7)
-            return;
-
-        // Open the page in the top most window, so the user can see it immediately.
-        var wm = Cc["@mozilla.org/appshell/window-mediator;1"].getService(Ci.nsIWindowMediator);
-        if (wm.getMostRecentWindow("navigator:browser") == this.win.top)
-        {
-            // Update the preference to make sure the page is not displayed again.
-            // To avoid being annoying when Firefox crashes, forcibly save it, too.
-            var version = this.getVersion();
-            Options.set("currentVersion", version);
-
-            if (Options.get("showFirstRunPage"))
-            {
-                var self = this;
-                var timeout = this.win.setTimeout(function()
-                {
-                    if (self.win.closed)
-                        return;
-
-                    self.openFirstRunPage(self.win);
-                }, 1000);
-
-                this.win.addEventListener("unload", function()
-                {
-                    self.win.clearTimeout(timeout);
-                }, false);
-            }
-        }
-    },
-
-    openFirstRunPage: function(win)
-    {
-        var version = this.getVersion();
-        var url = firstRunPage + version;
-
-        var browser = win.gBrowser || win.getBrowser();
-        if (!browser)
-        {
-            FBTrace.sysout("browserOverlay.openFirstRunPage; ERROR there is no gBrowser!");
-            return;
-        }
-
-        // Open the firstRunPage in background
-        /*gBrowser.selectedTab = */browser.addTab(url, null, null, null);
-
-        // Make sure prefs are stored, otherwise the firstRunPage would be displayed
-        // again if Firefox crashes.
-        this.win.setTimeout(function()
-        {
-            Options.forceSave();
-        }, 400);
-    },
 
     // xxxsz: Can't System.checkFirebugVersion() be used for that?
     checkFirebugVersion: function(currentVersion)

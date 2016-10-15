@@ -18,7 +18,6 @@ pref("extensions.firebug.hiddenPanels2", "");
 pref("extensions.firebug.panelTabMinWidth", 60);
 pref("extensions.firebug.sourceLinkLabelWidth", 17);
 pref("extensions.firebug.currentVersion", "");
-pref("extensions.firebug.showFirstRunPage", true);
 pref("extensions.firebug.useDefaultLocale", false);
 pref("extensions.firebug.activateSameOrigin", true);
 pref("extensions.firebug.toolbarCustomizationDone2", false);

@@ -29,7 +29,7 @@ var prefNames =  // XXXjjb TODO distribute to modules
     "activateSameOrigin", "allPagesActivation",
     "panelTabMinWidth", "sourceLinkLabelWidth", "currentVersion",
     "useDefaultLocale", "toolbarCustomizationDone2",
-    "showBreakNotification", "stringCropLength", "showFirstRunPage",
+    "showBreakNotification", "stringCropLength",
 
     // Search
     "searchCaseSensitive", "searchGlobal", "searchUseRegularExpression",
